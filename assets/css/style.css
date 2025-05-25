@@ -1,0 +1,230 @@
+*{
+    margin: 0;
+    padding: 0;
+        font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+}
+
+.grid_layout{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 10% auto 10%;
+    height: 100vh;
+    grid-template-areas: 
+    "navbar"
+    "filtros"
+    "contenido"
+    "footer"
+    ;
+}
+
+
+/*Barra de navegación*/
+.navbar{
+    grid-area: navbar;
+    background-color: #008080;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.content_nav{
+    display: none;
+}
+.logo_nav{
+    height: 2rem;
+}
+
+/*Filtros*/
+
+.filtros_busqueda{
+    grid-area: filtros;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ececec;
+
+}
+.filtros_busqueda p{
+    color: #4d4d4d;
+    font-weight: 900;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.dropdown{
+    width: 80%;
+}
+
+.btn{
+    height: 2rem;
+    width: 100%;
+    border: 1px solid #888888;
+    font-size: 12px;
+    
+}
+
+/*Contenido*/
+
+.contenido_principal{
+    grid-area: contenido;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    overflow: auto;
+}
+
+.catalogo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/*Cards*/
+.card_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #008080;
+    width: 90%;
+}
+
+.img_card{
+width: 90%;
+padding: 15px;
+}
+
+.button_cont{
+    display: flex;
+    background-color: #008080;
+    width: 100%;
+}
+
+.button_card1{
+    background-color: #008080;
+    color: white;
+   font-size: 14px;
+   font-weight: 700;
+     width: 100%;
+    padding: 10px;
+
+    border: none;
+    border-right: 1px solid white;
+}
+.button_card{
+    background-color: #008080;
+    color: white;
+   font-size: 14px;
+   font-weight: 700;
+     width: 100%;
+    padding: 10px;
+    border: none;
+}
+
+h4{
+  font-size: 16px;
+   font-weight: 900;
+       color: #4d4d4d;
+}
+
+p{
+      font-size: 16px;
+   font-weight: 400;
+    color: #888888;
+    margin-bottom: 15px;
+}
+
+/*Footer*/
+
+.footer{
+    grid-area: footer;
+    background-color: #008080;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            padding: 0 1rem;
+}
+.texto_footer{
+                    font-size: 14px;
+    font-weight: 400;
+    color: white;
+}
+.footer_bold{
+                        font-size: 14px;
+    font-weight: 700;
+    color: white;
+}
+
+@media (min-width: 576px) {
+
+    .grid_layout{
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    grid-template-rows: 10% 10% auto 10%;
+    height: 100vh;
+    grid-template-areas: 
+    "navbar filtros"
+    "navbar contenido"
+    "navbar contenido"
+    "footer contenido"
+    ;
+}
+
+/*Barra de navegación*/
+.navbar{
+    grid-area: navbar;
+    background-color: #008080;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 20px 0;
+}
+.content_nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.link_nav{
+    text-decoration: none;
+        color: white;
+            font-size: 14px;
+    font-weight: 700;
+padding: 10px;
+}
+
+.menu{
+    display: none;
+}
+.logo_nav{
+    height: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* contenido*/
+.contenido_principal{
+    grid-area: contenido;
+}
+.catalogo{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 30px;
+    padding-left: 60px;
+    padding-bottom: 0;
+        height: 100%;
+    overflow: auto;
+}
+
+.pagination{
+    margin-top: 20px;
+}
+
+}
